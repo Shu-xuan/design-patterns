@@ -23,9 +23,9 @@ public class Main {
     public static void test03() {
         File file = new File(Objects.requireNonNull(Main.class.getClassLoader().getResource("iterator.user")).getFile());
         System.out.println(file.toPath().toAbsolutePath());
-        UserFile users = new UserFile(file);
+        UserFile users = new UserFile(file, 5);
         for (User user : users) {
-            System.out.println(user);
+//            System.out.println(user);
         }
     }
 
