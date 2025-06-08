@@ -12,16 +12,16 @@ import java.util.NoSuchElementException;
  * @Author huhongyuan
  */
 public class User implements Iterable<Object> {
-    private String userName;
+    private String name;
     private Integer age;
 
-    public User(String userName, Integer age) {
-        this.userName = userName;
+    public User(String name, Integer age) {
+        this.name = name;
         this.age = age;
     }
 
     public String getUserName() {
-        return userName;
+        return name;
     }
 
     public Integer getAge() {
@@ -31,7 +31,7 @@ public class User implements Iterable<Object> {
     @Override
     public String toString() {
         return "User{" +
-                "userName='" + userName + '\'' +
+                "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
     }
@@ -41,7 +41,7 @@ public class User implements Iterable<Object> {
         return new UserIte(this);
     }
 
-    static class UserIte implements Iterator<Object> {
+    private class UserIte implements Iterator<Object> {
         private User user; // 需要传入具体的 User 实例
         private int currentIndex = 0;
         private int count;
