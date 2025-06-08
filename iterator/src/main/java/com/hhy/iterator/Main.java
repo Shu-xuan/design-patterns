@@ -20,7 +20,7 @@ public class Main {
     }
 
     public static void test03() {
-        File file = new File("iterator/src/main/resources/iterator.user");
+        File file = new File("resources/iterator.user");
         UserFile users = new UserFile(file, 5);
         for (User user : users) {
 //            System.out.println(user);

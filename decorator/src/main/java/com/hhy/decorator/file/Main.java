@@ -19,7 +19,7 @@ public class Main {
     }
 
     public static void test03() {
-        File file = new File("decorator/src/main/resources/booklet.pdf");
+        File file = new File("resources/booklet.pdf");
         long l = Instant.now().toEpochMilli();
         try (InputStream fileInputStream = new CounterFileInputStream(new BufferedFileInputStream(new FileInputStream(file)))) {
             while (true) {
@@ -35,7 +35,7 @@ public class Main {
     }
 
     public static void test02() {
-        File file = new File("booklet.pdf");
+        File file = new File("resources/booklet.pdf");
         long l = Instant.now().toEpochMilli();
         try (InputStream fileInputStream = new BufferedFileInputStream(new FileInputStream(file))) {
             while (true) {
@@ -51,7 +51,7 @@ public class Main {
     }
 
     public static void test01() {
-        File file = new File("booklet.pdf");
+        File file = new File("resources/booklet.pdf");
         long l = Instant.now().toEpochMilli();
         try (FileInputStream fileInputStream = new FileInputStream(file)) {
             while (true) {

@@ -1,6 +1,5 @@
 package com.hhy.composite.calculator;
 
-import com.hhy.design.composite.demo.Calc;
 
 /**
  * <p>
