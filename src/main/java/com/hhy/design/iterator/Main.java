@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * <p>
@@ -21,8 +20,7 @@ public class Main {
     }
 
     public static void test03() {
-        File file = new File(Objects.requireNonNull(Main.class.getClassLoader().getResource("iterator.user")).getFile());
-        System.out.println(file.toPath().toAbsolutePath());
+        File file = new File("iterator.user");
         UserFile users = new UserFile(file, 5);
         for (User user : users) {
 //            System.out.println(user);
