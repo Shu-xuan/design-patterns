@@ -99,6 +99,7 @@ public class BufferPool {
         try {
             int capacity = buffer.capacity();
             if (capacity == slotSize) {
+                buffer.clear();
                 slotQueue.addLast(buffer);
             } else {
                 availableSize += buffer.capacity();
@@ -106,7 +107,6 @@ public class BufferPool {
             if (!waiters.isEmpty()) {
                 waiters.peekFirst().signal();
             }
-            buffer = null;
         } finally {
             lock.unlock();
         }
